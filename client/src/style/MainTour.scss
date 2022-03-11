@@ -1,0 +1,32 @@
+.tour {
+  background-image: url("https://shinetheme.com/travelerdata/hikingtourdemo/wp-content/uploads/2019/11/img-bg-1.png?id=10256");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  &__heading {
+    text-align: center!important;
+
+    h2 {
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    padding: 0 19px;
+
+  }
+
+  &__owl-stage {
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.25s ease 0s;
+    width: 3200px;
+    touch-action: manipulation;
+    display: flex;
+  }
+}

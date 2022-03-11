@@ -1,0 +1,82 @@
+.about {
+  max-width: 1140px;
+  margin: auto;
+
+  &__trip {
+
+    .about__container {
+      margin-right: 20px;
+    }
+    &:after {
+      content: '\f6fc';
+      font-family: "Font Awesome 5 Pro";
+      display: inline-flex;
+      font-size: 15rem;
+      justify-content: center;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+      align-items: center;
+      font-weight: bolder;
+      color: #fff;
+    }
+  }
+
+  &__heading {
+    text-align: left;
+    margin-bottom: 3rem;
+
+    h2 {
+      position: relative;
+      padding-bottom: 20px;
+      display: inline-block;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 70px;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background: #fff;
+      }
+    }
+  }
+
+  &__lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  &__why-trip {
+    .about__heading {
+      text-align: center;
+
+      h2 {
+        &:after {
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .about__sub-lead {
+      text-align: center;
+    }
+
+    .about__row {
+      flex-wrap: wrap;
+      margin: 0 -20px;
+    }
+  }
+
+  &__head-title {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin: 0 auto 5rem auto;
+  }
+}

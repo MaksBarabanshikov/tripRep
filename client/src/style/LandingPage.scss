@@ -1,0 +1,84 @@
+
+.header {
+  background-image: url("../img/backgrounds/mainbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0,0,0,.1);
+  }
+
+  &__content {
+    max-width: 1140px;
+    min-height: 625px;
+    height: calc(100vh);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    text-align: center;
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  &__title {
+    text-shadow: 0 0 15px rgb(0 0 0 / 55%);
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+  }
+
+  &__scroll {
+    display: inline-flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: -100px;
+    transition: all .2s ease-in;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    transform: translateX(-50%);
+    &:after {
+      content: "\f322";
+      display: inline-block;
+      font-family: "Font Awesome 5 Pro";
+      font-size: 40px;
+      font-weight: bolder;
+      left: 50%;
+      color: #fff;
+    }
+  }
+}
+
+@keyframes bounce{
+  0%   { transform: scale(1,1)    translate(-50%,0); }
+  10%  { transform: scale(1.1,.9) translate(-50%,0); }
+  30%  { transform: scale(.9,1.1) translate(-50%,-40px); }
+  50%  { transform: scale(1,1)    translate(-50%,0); }
+  57%  { transform: scale(1,1)    translate(-50%,-10px); }
+  64%  { transform: scale(1,1)    translate(-50%,0); }
+  100% { transform: scale(1,1)    translate(-50%,0); }
+}

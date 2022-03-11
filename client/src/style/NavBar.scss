@@ -1,0 +1,51 @@
+.nav {
+  max-width: 1140px;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+
+  &__row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand-logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding-left: 15px;
+    position: relative;
+
+    &:after {
+      content: '\f6fc';
+      font-family: "Font Awesome 5 Pro";
+      display: inline-flex;
+      font-size: 30px;
+      position: absolute;
+      right: -48px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 10px 5px;
+    a {
+      padding: 10px 10px;
+      letter-spacing: .05em;
+      color: rgba(255,255,255,.7);
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &.active {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

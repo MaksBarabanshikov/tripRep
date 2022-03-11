@@ -1,0 +1,35 @@
+.social {
+  width: 100%;
+  background-color: #fff;
+  margin: 5em 0;
+
+  &__container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 15px;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+
+    &:hover {
+      color: #eec60a!important;
+      background: #f3f0f0;
+    }
+
+    &:after {
+      content: '\f188';
+      font-family: "Font Awesome 5 Pro";
+      display: inline-flex;
+      font-size: 40px;
+      color: #1f64af;
+    }
+  }
+}

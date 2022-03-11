@@ -1,0 +1,65 @@
+.image-card {
+  flex: 0 0 24%;
+  max-width: 25%;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  margin: 40px 15px 0 0;
+  overflow: hidden;
+  height: 308px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: center center;
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    height: 300px;
+    -ms-transform: scale(1.05);
+    transform: scale(1.13);
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__content {
+    -webkit-transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    h2 {
+      display: inline;
+      background: #1f64af;
+      -webkit-box-shadow: 10px 0 0 #1f64af, 0 0 0 #1f64af;
+      box-shadow: 10px 0 0 #1f64af, 0 0 0 #1f64af;
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    span {
+      background: #000;
+      display: block;
+      color: #fff;
+      padding-left: 10px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      -webkit-box-shadow: 10px 0 0 #000, 0 0 0 #000;
+      box-shadow: 10px 0 0 #000, 0 0 0 #000;
+    }
+  }
+}
