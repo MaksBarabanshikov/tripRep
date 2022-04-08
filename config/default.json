@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "jwtSecret": "maksim web mern",
-  "mongoUri": "mongodb+srv://admin:12345@cluster0.21bty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://admin:12345@cluster0.21bty.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
 }

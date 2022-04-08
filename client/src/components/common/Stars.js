@@ -6,15 +6,6 @@ export const Stars = (props) => {
 
     const rank = [5, 4, 3, 2, 1];
 
-    const listItems = rank.map(number => {
-       return <li
-            key={number.toString()}
-            onClick={ event => {
-                setStars(number)
-                setActive(event)
-            }
-            }/>
-    })
 
     const removeActive = name => {
         const listItem = name.parentElement.childNodes
@@ -37,7 +28,15 @@ export const Stars = (props) => {
 
     return (
         <ul className={classNames("tour-card__list row", props.stars)}>
-            {listItems}
+            {rank.map(star => {
+                return <li
+                    key={star.toString()}
+                    onClick={ event => {
+                        setStars(star)
+                        setActive(event)
+                    }
+                    }/>
+            })}
         </ul>
     );
 }

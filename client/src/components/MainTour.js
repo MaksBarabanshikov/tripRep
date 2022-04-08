@@ -1,7 +1,35 @@
 import {TourCard} from "./common/TourCard"
 import "../style/MainTour.scss"
+import {useCallback, useEffect, useState} from "react";
+import {useHttp} from "../hooks/http.hook";
+import axios from "axios";
 
 export const MainTour = () => {
+    const {request} = useHttp()
+    const [tours, setTours] = useState(null)
+    const [loading, setLoading] = useState(false)
+
+
+    useEffect(() => {
+
+        const getCard = async () => {
+            try {
+                await axios.get('/api/card', {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        console.log(response.data)
+                        setTours(response.data)
+                    })
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getCard()
+    }, [])
+
     return (
         <section className="tour site-section">
             <div className="tour__container container">
@@ -14,30 +42,18 @@ export const MainTour = () => {
                 </div>
                 <div className="tour__owl-stage-outer">
                     <div className="tour__owl-stage">
-                        <TourCard
-                            stars="global-five"
-                            src="https://shinetheme.com/travelerdata/hikingtourdemo/wp-content/uploads/2015/01/Indipendant-Travel1-2000x1250-680x500.jpg"
-                            location="Ural"
-                            title="Northern Ural Summer 2019"
-                            days="5 "
-                            price="50,00"
-                        />
-                        <TourCard
-                            stars="global-three"
-                            src="https://shinetheme.com/travelerdata/hikingtourdemo/wp-content/uploads/2015/01/iStock_000037401046XXXLarge-680x500.jpg"
-                            location="Ural"
-                            title="Northern Ural Summer 2019"
-                            days="5 "
-                            price="50,00"
-                        />
-                        <TourCard
-                            stars="global-zero"
-                            src="https://shinetheme.com/travelerdata/hikingtourdemo/wp-content/uploads/2015/01/detail_1-680x500.jpg"
-                            location="Ural"
-                            title="Northern Ural Summer 2019"
-                            days="5 "
-                            price="50,00"
-                        />
+                        {
+                            !!tours ? tours.map(
+                                card => (
+                                    <TourCard
+                                        key={card._id}
+                                        card={card}
+                                    />
+                                )
+                            )
+                                : <h1>Загрузка...</h1>
+
+                        }
                     </div>
                 </div>
             </div>

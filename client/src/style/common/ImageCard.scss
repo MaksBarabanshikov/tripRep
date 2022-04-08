@@ -1,6 +1,5 @@
 .image-card {
-  flex: 0 0 24%;
-  max-width: 25%;
+  flex: 1 1 calc(25% - 25px);
   padding-right: 15px;
   padding-left: 15px;
   position: relative;
