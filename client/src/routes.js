@@ -9,15 +9,17 @@ export const useRoutes = isAuthentificated => {
         return (
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
-                <Route path="/tour/:id" element={<TourPage/>}/>}/>
-                {/*<Route path="/*" element={<Navigate to="/" replace/>}/>*/}
+                <Route path="/tour" element={<TourPage/>}>
+                    <Route path=":id" element={<TourPage/>}/>
+                </Route>
+                <Route path="*" element={<Navigate to="/" replace/>}/>
             </Routes>
         )
     }
     return (
         <Routes>
             <Route path="/auth" element={<AuthPage/>}/>
-            {/*<Route path="/*" element={<Navigate replace to="/auth"/>}/>*/}
+            <Route path="*" element={<Navigate replace to="/auth"/>}/>
         </Routes>
     )
 }

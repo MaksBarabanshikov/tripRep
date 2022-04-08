@@ -3,12 +3,11 @@ import "../style/MainTour.scss"
 import {useCallback, useEffect, useState} from "react";
 import {useHttp} from "../hooks/http.hook";
 import axios from "axios";
+import Loader from "./common/Loader";
 
 export const MainTour = () => {
-    const {request} = useHttp()
     const [tours, setTours] = useState(null)
     const [loading, setLoading] = useState(false)
-
 
     useEffect(() => {
 
@@ -20,7 +19,6 @@ export const MainTour = () => {
                     }
                 })
                     .then(response => {
-                        console.log(response.data)
                         setTours(response.data)
                     })
             } catch (e) {
@@ -51,7 +49,7 @@ export const MainTour = () => {
                                     />
                                 )
                             )
-                                : <h1>Загрузка...</h1>
+                                : <Loader/>
 
                         }
                     </div>

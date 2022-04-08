@@ -39,7 +39,7 @@ export const TourCard = ({card}) => {
     return (
         <div className="tour-card">
             <div className="tour-card__thumb">
-                <Link to={`/Tour/${card._id}`} className="tour-card__link" onClick={handleReview}>
+                <Link to={`/tour/${card._id}`} className="tour-card__link" onClick={handleReview}>
                     <img src={tourCardImage1} alt="Theme"/>
                 </Link>
             </div>
