@@ -1,18 +1,20 @@
 import {MainHead} from "../MainHead";
 import {MainFooter} from "../MainFooter";
-import bgimage from "../../img/backgrounds/tourCard1.jpg"
+import {useState} from "react";
+import MainTourInfo from "./MainTourInfo";
 
 const MainTourContent = ({tour}) => {
+    const [tourData, setTourData] = useState({...tour})
     console.log(tour)
-    return(
-        <>
-            <MainHead/>
-            {
-                <div>{tour.name}</div>
-            }
-            <MainFooter/>
-        </>
-    )
+
+        return(
+            <>
+                <MainHead/>
+                <MainTourInfo content={tourData}/>
+                <MainFooter/>
+            </>
+        )
+
 }
 
 export default MainTourContent

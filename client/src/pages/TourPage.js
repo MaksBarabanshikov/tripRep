@@ -18,9 +18,9 @@ const TourPage = () => {
                     headers: {
                         'Content-Type': 'application/json'
                     }
-                })
-                    .then(response => {
-                        setTour(response.data)
+                }).then(response => {
+                        const tourData = response.data
+                        setTour(tourData)
                         setLoading(false)
                     })
             } catch (e) {
@@ -29,17 +29,19 @@ const TourPage = () => {
             }
         }
         getTour()
-    }, [id])
+    }, [id, setTour])
 
     if (loading) {
         return <Loader/>
+    } else {
+        return (
+            <>
+                {!loading && !!tour && <MainTourContent tour={tour}/>}
+            </>
+        )
     }
 
-    return (
-        <>
-            {!loading && <MainTourContent tour={tour}/>}
-        </>
-    )
+
 }
 
 export default TourPage

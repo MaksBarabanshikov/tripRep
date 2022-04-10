@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import {useState} from "react";
+import "../../style/common/stars.scss"
 
 export const Stars = (props) => {
     const [stars, setStars] = useState(null)
@@ -27,7 +28,7 @@ export const Stars = (props) => {
 
 
     return (
-        <ul className={classNames("tour-card__list row", props.stars)}>
+        <ul className={classNames("stars row", props.stars)}>
             {rank.map(star => {
                 return <li
                     key={star.toString()}

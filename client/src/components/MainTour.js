@@ -10,7 +10,6 @@ export const MainTour = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-
         const getCard = async () => {
             try {
                 await axios.get('/api/card', {

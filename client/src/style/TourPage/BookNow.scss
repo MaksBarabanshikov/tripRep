@@ -1,0 +1,97 @@
+.book-now {
+  position: sticky;
+  background-color: #fff;
+  width: 25%;
+  max-height: 500px;
+  border-radius: 8px;
+  border: 1px solid #D7DCE3;
+  top: 0;
+
+  &__heading {
+    padding: 17px 20px;
+    background: #5191FA;
+    font-size: 12px;
+    border-radius: 5px 5px 0 0;
+
+    h1 {
+      color: #fff !important;
+      margin: 0 !important;
+
+      span {
+        color: #fff !important;
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  &__section {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    cursor: pointer;
+    justify-content: space-between;
+    &:after {
+      content: "\f107";
+      font-family: "Font Awesome 5 Pro";
+      display: inline-flex;
+      font-size: 25px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+  }
+
+  &__block {
+    flex: 0 0 60%;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    padding: 17px 20px;
+
+    button {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 25px;
+      background: #5191FA;
+      color: #FFF;
+      box-shadow: none;
+      border-radius: 3px;
+      transition: background .2s, color .2s;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      &:hover {
+        background: #4977FA;
+        color: #FFF;
+      }
+    }
+  }
+
+  .book-count {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 35px;
+      font-weight: 100;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+}

@@ -4,31 +4,6 @@ import {Link} from "react-router-dom";
 import tourCardImage1 from "../../img/backgrounds/tourCard1.jpg"
 import "../../style/common/TourCard.scss"
 
-// const tourCardData = [
-//     {
-//         id: '624ef40dde2cfa6c7cbdddf7',
-//         src: tourCardImage1
-//     },
-//     {
-//         id: '624ef40dde2cfa6c7cbdddf8',
-//         src: tourCardImage2,
-//     },
-//     {
-//         id: '624ef40dde2cfa6c7cbdddf9',
-//         src: tourCardImage3,
-//     },
-// ]
-
-
-// const getImage = (id) => (
-//     [...tourCardData].map(image => {
-//         if (id === image.id) {
-//             console.log(image.src)
-//             return image.src
-//         }
-//     })
-// )
-
 export const TourCard = ({card}) => {
     let [counter, setCounter] = useState(0)
 
