@@ -7,8 +7,8 @@ export const MainHead = () => {
                 <div className="header__content">
                     <Navbar/>
                     <div className="header__text">
-                        <h2 className="header__title text-white">Moodwill makes life easier, better!</h2>
-                        <h5 className="header__subtitle bounce-1" >Listen and feel the power of nature. Use your headphones for a better experience.</h5>
+                        <h2 className="header__title text-white">Trip делает жизнь проще и лучше!</h2>
+                        <h5 className="header__subtitle bounce-1" >Туризм и путешествия</h5>
                         <ScrollItem
                             className="header__scroll"
                             activeClass="active"

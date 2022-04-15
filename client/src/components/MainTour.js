@@ -1,31 +1,46 @@
+import {TourContext} from "../context/TourContext"
 import {TourCard} from "./common/TourCard"
+import {useContext} from "react"
+import Loader from "./common/Loader"
+import Slider from "react-slick"
+
 import "../style/MainTour.scss"
-import {useCallback, useEffect, useState} from "react";
-import {useHttp} from "../hooks/http.hook";
-import axios from "axios";
-import Loader from "./common/Loader";
+import "slick-carousel/slick/slick.scss"
+import "slick-carousel/slick/slick-theme.scss"
 
 export const MainTour = () => {
-    const [tours, setTours] = useState(null)
-    const [loading, setLoading] = useState(false)
-
-    useEffect(() => {
-        const getCard = async () => {
-            try {
-                await axios.get('/api/card', {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                    .then(response => {
-                        setTours(response.data)
-                    })
-            } catch (e) {
-                console.log(e)
+    const context = useContext(TourContext)
+    console.log(context.tourData)
+    const settingsSlider = {
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        }
-        getCard()
-    }, [])
+        ]
+    }
 
     return (
         <section className="tour site-section">
@@ -33,14 +48,13 @@ export const MainTour = () => {
                 <div className="head-title">
                     <div className="tour__heading heading">
                         <h2 className="tour__title">
-                            Feature Hiking Tours
+                            Туры
                         </h2>
                     </div>
                 </div>
-                <div className="tour__owl-stage-outer">
-                    <div className="tour__owl-stage">
-                        {
-                            !!tours ? tours.map(
+                <Slider {...settingsSlider}>
+                    {
+                        !!context.tourData ? context.tourData.map(
                                 card => (
                                     <TourCard
                                         key={card._id}
@@ -48,11 +62,10 @@ export const MainTour = () => {
                                     />
                                 )
                             )
-                                : <Loader/>
+                            : <Loader/>
 
-                        }
-                    </div>
-                </div>
+                    }
+                </Slider>
             </div>
         </section>
     )

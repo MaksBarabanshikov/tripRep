@@ -1,45 +1,18 @@
 import {useParams} from "react-router-dom"
-import {useState, useEffect} from "react";
-import axios from "axios";
-import Loader from "../components/common/Loader";
+import {useContext} from "react";
 import MainTourContent from "../components/TourPage/MainTourContent";
+import {TourContext} from "../context/TourContext";
 
 const TourPage = () => {
-    const [tour, setTour] = useState(null)
-    const [loading, setLoading] = useState(false)
+    const context = useContext(TourContext)
     const {id} = useParams();
+    const tour = context.tourData.filter(item => item._id === id)
 
-
-    useEffect(() => {
-        const getTour = async () => {
-            setLoading(true)
-            try {
-                await axios.get(`/api/tour/${id}`, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }).then(response => {
-                        const tourData = response.data
-                        setTour(tourData)
-                        setLoading(false)
-                    })
-            } catch (e) {
-                setLoading(false)
-                console.log(e)
-            }
-        }
-        getTour()
-    }, [id, setTour])
-
-    if (loading) {
-        return <Loader/>
-    } else {
         return (
             <>
-                {!loading && !!tour && <MainTourContent tour={tour}/>}
+                {!!tour && <MainTourContent tour={tour[0]}/>}
             </>
         )
-    }
 
 
 }

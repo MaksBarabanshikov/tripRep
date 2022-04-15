@@ -2,6 +2,8 @@ import {useState} from "react"
 import {Stars} from "./Stars";
 import {Link} from "react-router-dom";
 import tourCardImage1 from "../../img/backgrounds/tourCard1.jpg"
+import tourCardImage2 from "../../img/backgrounds/tourCard2.jpg"
+import tourCardImage3 from "../../img/backgrounds/tourCard3.jpg"
 import "../../style/common/TourCard.scss"
 
 export const TourCard = ({card}) => {
@@ -15,7 +17,7 @@ export const TourCard = ({card}) => {
         <div className="tour-card">
             <div className="tour-card__thumb">
                 <Link to={`/tour/${card._id}`} className="tour-card__link" onClick={handleReview}>
-                    <img src={tourCardImage1} alt="Theme"/>
+                    <img src={card.src} alt="Theme"/>
                 </Link>
             </div>
             <p className="tour-card__location">
@@ -36,10 +38,10 @@ export const TourCard = ({card}) => {
                 </div>
                 <div className="tour-card__price">
                   <span className="tour-card__fr-text">
-                      from
+                      от
                   </span>
                     <span className="tour-card__price-text">
-                       {card.price}
+                       {card.price} ₽
                   </span>
                 </div>
             </div>

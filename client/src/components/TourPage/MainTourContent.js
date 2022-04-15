@@ -1,16 +1,15 @@
-import {MainHead} from "../MainHead";
-import {MainFooter} from "../MainFooter";
-import {useState} from "react";
-import MainTourInfo from "./MainTourInfo";
+import {MainFooter} from "../MainFooter"
+import MainTourInfo from "./MainTourInfo"
+import NewHeader from "../New/NewHeader"
+import Banner from "./Banner";
 
 const MainTourContent = ({tour}) => {
-    const [tourData, setTourData] = useState({...tour})
-    console.log(tour)
-
+        console.log("tourContent:", tour)
         return(
             <>
-                <MainHead/>
-                <MainTourInfo content={tourData}/>
+                <NewHeader/>
+                <Banner src={tour.src}/>
+                <MainTourInfo content={tour}/>
                 <MainFooter/>
             </>
         )

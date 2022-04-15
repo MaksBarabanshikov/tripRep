@@ -1,3 +1,5 @@
-import React from "react";
+import {createContext} from "react";
 
-export const TourContext = React.createContext()
+export const TourContext = createContext({
+    tourData: null,
+})

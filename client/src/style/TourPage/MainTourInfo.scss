@@ -1,14 +1,17 @@
 .tour {
   &-info {
-    display: flex;
-    justify-content: center;
-    background-color: #f9f9f9;
-    color: #1A2B48;
-    padding: 60px 0;
+
+    &__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background-color: #f9f9f9;
+      color: #1A2B48;
+      padding: 60px 0;
+    }
 
     &__container {
       max-width: 1200px;
-      position: relative;
       padding: 0 15px;
     }
 
@@ -42,6 +45,7 @@
   }
 
   &__head {
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 
@@ -152,7 +156,6 @@
   &__itinerary {
     border-top: 2px solid #D7DCE3;
     border-bottom: 2px solid #D7DCE3;
-    margin: 35px 0;
     padding: 30px 0;
   }
 

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.efb9fd9e.css",
+    "main.js": "/static/js/main.7324bda1.js",
+    "static/media/mainbg.jpg": "/static/media/mainbg.1522568a52a2f2cbf498.jpg",
+    "static/media/imageCardBg4.jpg": "/static/media/imageCardBg4.b3ba2687c90e65bd53da.jpg",
+    "static/media/tourCard3.jpg": "/static/media/tourCard3.8a8ac75a78b6e021765d.jpg",
+    "static/media/imageCardBg2.jpg": "/static/media/imageCardBg2.b9c8e264a23ac4cb6111.jpg",
+    "static/media/imageCardBg3.jpg": "/static/media/imageCardBg3.daab3edebc921b1486ef.jpg",
+    "static/media/imageCardBg1.jpg": "/static/media/imageCardBg1.18943e06fcbcfdf6a5b9.jpg",
+    "static/media/tourCard2.jpg": "/static/media/tourCard2.4bfe38162246e877f67e.jpg",
+    "static/media/tourCard1.jpg": "/static/media/tourCard1.53432ea53584f4b04d22.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.efb9fd9e.css.map": "/static/css/main.efb9fd9e.css.map",
+    "main.7324bda1.js.map": "/static/js/main.7324bda1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efb9fd9e.css",
+    "static/js/main.7324bda1.js"
+  ]
+}

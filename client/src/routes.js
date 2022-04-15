@@ -2,6 +2,8 @@ import {Routes, Route, Navigate} from 'react-router-dom'
 import {LandingPage} from "./pages/LandingPage";
 import {AuthPage} from "./pages/AuthPage";
 import TourPage from "./pages/TourPage";
+import OrderingPage from "./pages/OrderingPage";
+import ScrollController from "./components/ScrollController/ScrollController";
 
 
 export const useRoutes = isAuthentificated => {
@@ -12,6 +14,7 @@ export const useRoutes = isAuthentificated => {
                 <Route path="/tour" element={<TourPage/>}>
                     <Route path=":id" element={<TourPage/>}/>
                 </Route>
+                <Route path="/ordering" element={<OrderingPage/>}/>
                 <Route path="*" element={<Navigate to="/" replace/>}/>
             </Routes>
         )

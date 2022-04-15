@@ -1,8 +1,11 @@
+.book-now-container {
+  position: relative;
+  width: 25%;
+}
 .book-now {
   position: sticky;
   background-color: #fff;
-  width: 25%;
-  max-height: 500px;
+  width: 100%;
   border-radius: 8px;
   border: 1px solid #D7DCE3;
   top: 0;
@@ -33,14 +36,30 @@
 
   &__date {
     cursor: pointer;
-    justify-content: space-between;
-    &:after {
-      content: "\f107";
-      font-family: "Font Awesome 5 Pro";
-      display: inline-flex;
-      font-size: 25px;
-      font-weight: 700;
-      margin-right: 10px;
+    flex-direction: column;
+
+    .book-now__block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &:after {
+        content: "\f107";
+        font-family: "Font Awesome 5 Pro";
+        display: inline-flex;
+        font-size: 25px;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    }
+
+    .book-now__hidden {
+      visibility: hidden;
+      display: none;
+
+      &.active {
+        visibility: visible;
+        display: block;
+      }
     }
   }
 
@@ -81,9 +100,15 @@
     flex: 0 0 40%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    p {
+    input {
       font-size: 20px;
+      border: none;
+      box-shadow: none;
+      width: 35px;
+      margin: 0;
+      color: #5191FA;
     }
 
     span {
@@ -92,6 +117,10 @@
       cursor: pointer;
       user-select: none;
     }
+  }
+
+  .react-calendar {
+    width: 100%;
   }
 
 }

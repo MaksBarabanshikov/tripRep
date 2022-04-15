@@ -13,8 +13,6 @@ export const LandingPage = () => {
             <MainHead/>
             <MainAbout/>
             <MainTour/>
-            <MainForm/>
-            <MainSocial/>
             <MainFooter/>
         </>
 

@@ -1,0 +1,26 @@
+.ordering-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  font-size: 18px;
+  background-color: #186a9e;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  div {
+
+    a {
+      color: #fff;
+
+      &:first-child {
+        margin-right: 25px;
+      }
+    }
+
+  }
+}
