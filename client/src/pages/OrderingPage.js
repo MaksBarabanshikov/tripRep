@@ -29,7 +29,6 @@ const OrderingPage = () => {
     })
     const [orderLast, setOrderLast] = useState({})
 
-
     const createOrder = useCallback(async (data) => {
         try {
             await axios.post('/api/order/',
@@ -38,16 +37,12 @@ const OrderingPage = () => {
                     lastName: data.lastName,
                     tel: data.tel,
                     email: data.email,
-                    // orders: {
-                    //     firstName: data.firstName,
-                    //     lasNameName: data.lastName,
-                    //     // email: data.email,
-                    //     // tel: data.tel,
-                    //     // people: {...location.state.tourist},
-                    //     // price: getTotalPrice(getFullPrice(), 0.1, getDiscount()),
-                    //     // tour: locationTour._id
-                    // },
-                    // userId
+                    owner: userId,
+                    orderTour: {
+                        people: location.state.tourist.filter(tourist => tourist.counter > 0),
+                        price: getTotalPrice(getFullPrice(), 0.1, getDiscount()),
+                        tour: locationTour._id
+                    }
                 },
                 {
                     headers: {
@@ -56,7 +51,7 @@ const OrderingPage = () => {
                 })
                 .then((response) => console.log("12",response))
         } catch (e) {
-
+            console.log(e)
         }
     }, [])
 

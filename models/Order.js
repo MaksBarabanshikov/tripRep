@@ -1,11 +1,16 @@
-const {Schema, model} = require("mongoose");
+const {Schema, model, Types} = require("mongoose");
 
 const schema = new Schema({
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
-    email: {type: String, required: true, unique: true},
-    tel: {type: String, required: true, unique: true},
-    // orders: {type: Object, required: true},
+    email: {type: String, required: true},
+    tel: {type: String, required: true},
+    owner: {type: Types.ObjectId, ref: "User"},
+    orderTour: {
+        people: {type: Array, required: true},
+        price: {type: Number, required: true},
+        tour: {type: Types.ObjectId, ref: "tours"}
+    },
 })
 
 

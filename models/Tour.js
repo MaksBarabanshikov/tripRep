@@ -1,4 +1,4 @@
-const {Schema, model} = require("mongoose");
+const {Schema, model, Types} = require("mongoose");
 
 const schema = new Schema({
     "name": {type: String, required: true},
@@ -13,7 +13,8 @@ const schema = new Schema({
     "lang": {type: String, required: true},
     "description" : {type: String, required: true},
     "highlights": {type: Array, required: true},
-    "route": {type: Array, required: true}
+    "route": {type: Array, required: true},
+    orderTour: {type: Types.ObjectId, ref: "Order"}
 })
 
 
