@@ -9,6 +9,7 @@ const schema = new Schema({
     orderTour: {
         people: {type: Array, required: true},
         price: {type: Number, required: true},
+        date: {type: String, required: true},
         tour: {type: Types.ObjectId, ref: "tours"}
     },
 })

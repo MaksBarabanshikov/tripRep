@@ -1,9 +1,6 @@
 import {useState} from "react"
 import {Stars} from "./Stars";
 import {Link} from "react-router-dom";
-import tourCardImage1 from "../../img/backgrounds/tourCard1.jpg"
-import tourCardImage2 from "../../img/backgrounds/tourCard2.jpg"
-import tourCardImage3 from "../../img/backgrounds/tourCard3.jpg"
 import "../../style/common/TourCard.scss"
 
 export const TourCard = ({card}) => {

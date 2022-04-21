@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         const tour = await Tour.find()
         res.json(tour)
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так, попробуйте снова!!'})
+        res.status(500).json({message: 'Что-то пошло не так, попробуйте снова'})
     }
 })
 

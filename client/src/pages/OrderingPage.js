@@ -28,6 +28,7 @@ const OrderingPage = () => {
         mode: "onBlur", resolver: yupResolver(schema)
     })
     const [orderLast, setOrderLast] = useState({})
+    const [message, setMessage] = useState(null)
 
     const createOrder = useCallback(async (data) => {
         try {
@@ -41,6 +42,7 @@ const OrderingPage = () => {
                     orderTour: {
                         people: location.state.tourist.filter(tourist => tourist.counter > 0),
                         price: getTotalPrice(getFullPrice(), 0.1, getDiscount()),
+                        date: location.state.date.toString(),
                         tour: locationTour._id
                     }
                 },
@@ -48,10 +50,9 @@ const OrderingPage = () => {
                     headers: {
                         'Content-Type': 'application/json'
                     }
-                })
-                .then((response) => console.log("12",response))
+                }).then(response => {alert(response.data.message)})
         } catch (e) {
-            console.log(e)
+            console.log({e})
         }
     }, [])
 
@@ -71,10 +72,10 @@ const OrderingPage = () => {
                 order: {
                     people: {...location.state.tourist},
                     price: getTotalPrice(getFullPrice(), 0.1, getDiscount()),
+                    date: location.state.date,
                     tour: locationTour._id
                 }
             })
-        console.log("data: ", data)
         createOrder(data)
     }
 

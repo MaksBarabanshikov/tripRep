@@ -3,14 +3,15 @@ import {TourCard} from "./common/TourCard"
 import {useContext} from "react"
 import Loader from "./common/Loader"
 import Slider from "react-slick"
-
+import image1 from "../img/backgrounds/tourCard1.jpg"
+import image2 from "../img/backgrounds/tourCard2.jpg"
+import image3 from "../img/backgrounds/tourCard3.jpg"
 import "../style/MainTour.scss"
 import "slick-carousel/slick/slick.scss"
 import "slick-carousel/slick/slick-theme.scss"
 
 export const MainTour = () => {
     const context = useContext(TourContext)
-    console.log(context.tourData)
     const settingsSlider = {
         infinite: false,
         speed: 500,

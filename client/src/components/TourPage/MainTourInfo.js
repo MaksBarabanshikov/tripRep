@@ -4,10 +4,6 @@ import BookNow from "./BookNow"
 import "../../style/TourPage/MainTourInfo.scss"
 
 const MainTourInfo = ({content}) => {
-    console.log(content)
-    content.highlights.map(item => {
-        console.log(item.moment)
-    })
     return (
         <section className="tour-info">
             <div className="tour-info__wrapper">

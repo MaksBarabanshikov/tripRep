@@ -1,5 +1,6 @@
 const express = require('express')
 const config = require('config')
+const path = require('path')
 const mongoose = require('mongoose')
 
 const app = express()
@@ -10,9 +11,15 @@ app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/card', require('./routes/card.routes'))
 app.use('/api/tour', require('./routes/tour.routes'))
 app.use('/api/order', require('./routes/order.routes'))
+app.use('/api/cabinet', require('./routes/cabinet.routes'))
 
+if (process.env.NODE_ENV === "production") {
+    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 
-
+    app.get('*', (res, req) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
 
 const PORT = config.get('port') || 5000
 

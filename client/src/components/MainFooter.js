@@ -13,18 +13,6 @@ export const MainFooter = () => {
                             <p className="footer__sub-lead">TRIP is a free web app that provides high quality nature
                                 sounds online to help you concentrate, relax, sleep and overall feel better.</p>
                         </div>
-                        <div className="footer__block">
-                            <div className="footer__heading heading">
-                                <h2 className="footer__title">SHARING IS CARING</h2>
-                            </div>
-                            <div className="footer__row row">
-                                <a className="footer__social" href="#" target="_blank">1</a>
-                                <a className="footer__social" href="#" target="_blank">1</a>
-                                <a className="footer__social" href="#" target="_blank">1</a>
-                                <a className="footer__social" href="#" target="_blank">1</a>
-                                <a className="footer__social" href="#" target="_blank">1</a>
-                            </div>
-                        </div>
                     </div>
                     <div className="footer__col">
                         <div className="footer__block">
@@ -56,22 +44,14 @@ export const MainFooter = () => {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div className="footer__col">
                         <div className="footer__block">
                             <div className="footer__heading heading">
                                 <h2 className="footer__title">TRIP APP (SOON)</h2>
                             </div>
                             <p className="footer__sub-lead">Android</p>
                             <p className="footer__sub-lead">iOS</p>
-                        </div>
-                    </div>
-                    <div className="footer__col">
-                        <div className="footer__heading heading">
-                            <h2 className="footer__title">GET A FREE QUOTE</h2>
-                        </div>
-                        <p className="footer__sublead">Join more than 3,000 people on our mailing list.</p>
-                        <div className="footer__input-group row">
-                            <input type="email" className="footer__input form__input" placeholder="Your email"/>
-                            <input type="submit" className="footer__btn btn" value="Subscribe"/>
                         </div>
                     </div>
                 </div>

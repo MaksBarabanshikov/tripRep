@@ -4,7 +4,6 @@ import NewHeader from "../New/NewHeader"
 import Banner from "./Banner";
 
 const MainTourContent = ({tour}) => {
-        console.log("tourContent:", tour)
         return(
             <>
                 <NewHeader/>

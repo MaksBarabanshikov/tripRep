@@ -13,7 +13,7 @@ const NewHeader = () => {
                 <h1>TRIP Бронирование</h1>
             </Link>
             <div className="ordering-header__social">
-                <a href="#">+7 912 435 54 32</a>
+                <Link to="/my">Личный кабинет</Link>
                 <a href="#">Выйти</a>
             </div>
         </section>

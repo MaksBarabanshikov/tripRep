@@ -3,8 +3,9 @@ import {LandingPage} from "./pages/LandingPage";
 import {AuthPage} from "./pages/AuthPage";
 import TourPage from "./pages/TourPage";
 import OrderingPage from "./pages/OrderingPage";
-import ScrollController from "./components/ScrollController/ScrollController";
-
+import MyCabinet from "./pages/MyCabinet";
+import CabinetPersonal from "./components/MyCabinet/CabinetPersonal";
+import CabinetOrder from "./components/MyCabinet/CabinetOrder";
 
 export const useRoutes = isAuthentificated => {
     if (isAuthentificated) {
@@ -15,6 +16,9 @@ export const useRoutes = isAuthentificated => {
                     <Route path=":id" element={<TourPage/>}/>
                 </Route>
                 <Route path="/ordering" element={<OrderingPage/>}/>
+                <Route path="/my" element={<MyCabinet/>}/>
+                <Route path="/my/personal" element={<CabinetPersonal/>}/>
+                <Route path="/my/order" element={<CabinetOrder/>}/>
                 <Route path="*" element={<Navigate to="/" replace/>}/>
             </Routes>
         )

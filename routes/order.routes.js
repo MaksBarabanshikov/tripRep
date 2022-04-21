@@ -1,8 +1,5 @@
 const {Router} = require('express')
 const Order = require('../models/Order')
-// const User = require('../models/User')
-// const config = require('config')
-// const auth = require('../middleware/auth.middleware')
 const router = Router()
 
 router.post('/', async (req, res) => {
@@ -19,8 +16,6 @@ router.post('/', async (req, res) => {
         })
 
         await order.save()
-
-        console.log(order)
 
         res.status(201).json({message: "Бронирование прошло успешно"})
 

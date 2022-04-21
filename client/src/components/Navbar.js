@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {NavLink, useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import "../style/NavBar.scss"
 
@@ -17,6 +17,9 @@ export const Navbar = () => {
             <div className="nav__row row">
                 <span className="nav__brand-logo text-white">Trip</span>
                 <ul id="nav-mobile" className="nav__list row">
+                    <li className="nav__item">
+                        <Link to="/my">Личный кабинет</Link>
+                    </li>
                     <li className="nav__item"><a href="/" onClick={logoutHandler}>Выход</a></li>
                 </ul>
             </div>

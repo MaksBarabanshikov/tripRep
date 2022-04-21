@@ -1,17 +1,13 @@
-import {Link, useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom"
 import "../../style/common/BreadCrumb.scss"
 
-const BreadCrumb = () => {
-    const navigate = useNavigate()
-    const handleNavigate = () => {
-        navigate(-1)
-    }
+const BreadCrumb = ({location}) => {
 
     return (
         <section className="breadcrumb">
             <div className="breadcrumb__container">
                 <Link to="/">Главная</Link>
-                <a href="#" onClick={handleNavigate}>Назад</a>
+                <span className="breadcrumb__current">{location}</span>
             </div>
         </section>
 )
